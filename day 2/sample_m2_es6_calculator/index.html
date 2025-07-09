@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Arithmetic Results</h1>
+            <p id="addResult"></p>
+            <p id="subResult"></p>
+            <p id="mulResult"></p>
+            <p id="divResult"></p>
+        </section>
+    </main>
+
+    <script>
+        const add = (a, b) => a + b;
+        const subtract = (a, b) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => b !== 0 ? a / b : "Cannot divide by zero";
+
+        const a = 20, b = 5;
+
+        document.getElementById("addResult").textContent = `Add: ${add(a, b)}`;
+        document.getElementById("subResult").textContent = `Subtract: ${subtract(a, b)}`;
+        document.getElementById("mulResult").textContent = `Multiply: ${multiply(a, b)}`;
+        document.getElementById("divResult").textContent = `Divide: ${divide(a, b)}`;
+    </script>
+</body>
+
+</html>

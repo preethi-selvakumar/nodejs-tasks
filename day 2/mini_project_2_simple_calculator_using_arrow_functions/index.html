@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator Using Arrow Functions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.6rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        button {
+            flex: 1;
+            padding: 0.6rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Mini Project 2: Simple Calculator Using Arrow Functions</h1>
+            <form onsubmit="handleSubmit(event)">
+                <label for="num1">Number 1:</label>
+                <input type="number" id="num1" required />
+
+                <label for="num2">Number 2:</label>
+                <input type="number" id="num2" required />
+
+                <div class="buttons">
+                    <button type="button" onclick="showResult('add')">+</button>
+                    <button type="button" onclick="showResult('subtract')">-</button>
+                    <button type="button" onclick="showResult('multiply')">*</button>
+                    <button type="button" onclick="showResult('divide')">/</button>
+                </div>
+            </form>
+            <p id="result"></p>
+        </section>
+    </main>
+
+
+    <script>
+        const add = (a, b) => `The result of ${a} + ${b} is ${a + b}.`;
+        const subtract = (a, b) => `The result of ${a} - ${b} is ${a - b}.`;
+        const multiply = (a, b) => `The result of ${a} * ${b} is ${a * b}.`;
+        const divide = (a, b) => b !== 0
+            ? `The result of ${a} / ${b} is ${a / b}.`
+            : "Cannot divide by zero.";
+
+        function handleSubmit(event) {
+            event.preventDefault();
+        }
+
+        function showResult(operation) {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            let resultText = "";
+
+            if (operation === "add") {
+                resultText = add(num1, num2);
+            } 
+            else if (operation === "subtract") {
+                resultText = subtract(num1, num2);
+            } 
+            else if (operation === "multiply") {
+                resultText = multiply(num1, num2);
+            }
+             else if (operation === "divide") {
+                resultText = divide(num1, num2);
+            }
+
+            document.getElementById("result").textContent = resultText;
+        }
+    </script>
+</body>
+
+</html>

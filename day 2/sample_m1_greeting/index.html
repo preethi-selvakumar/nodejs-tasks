@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 0.75rem;
+            margin-bottom: 0.25rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 1.5rem;
+            padding: 0.6rem;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #greetingOutput {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            text-align: center;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <h1>Greeting Generator</h1>
+
+            <form onsubmit="handleGreet(event)">
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" placeholder="Enter your name" required />
+
+                <label for="hobbyInput">Hobby:</label>
+                <input type="text" id="hobbyInput" placeholder="Enter your hobby" required />
+
+                <button type="submit">Generate Greeting</button>
+            </form>
+
+            <p id="greetingOutput"></p>
+        </section>
+    </main>
+
+    <script>
+        const createGreeting = (name, hobby) => {
+            return `Hello, my name is ${name}, and I enjoy ${hobby}.`;
+        };
+
+        function handleGreet(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("nameInput").value;
+            const hobby = document.getElementById("hobbyInput").value;
+
+            const greeting = createGreeting(name, hobby);
+            document.getElementById("greetingOutput").textContent = greeting;
+        }
+
+    </script>
+</body>
+
+</html>
