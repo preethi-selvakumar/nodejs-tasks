@@ -1,0 +1,1 @@
+This is the content for task4.txt written using fs.writeFile.
