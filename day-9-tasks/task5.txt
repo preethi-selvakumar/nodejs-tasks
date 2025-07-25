@@ -1,0 +1,3 @@
+
+Appended from Task 5 using fs.appendFile.
+Appended line
