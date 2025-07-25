@@ -1,0 +1,2 @@
+Hello! This is content from miniproject3.txt file.
+This is used for File Reader Server project.
