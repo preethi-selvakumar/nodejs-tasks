@@ -1,0 +1,15 @@
+Task 5 Input File
+
+This file is created to test reading large files using Node.js streams.
+We want to calculate how many total bytes are read while processing this file.
+
+Streams are memory efficient because they process data chunk by chunk
+instead of loading the entire file into memory at once.
+This is especially useful when working with very large files like logs,
+videos, or data exports.
+
+By reading this file with a readable stream, we can measure
+the total number of bytes transferred from disk to our program.
+This is a basic but powerful demonstration of how streams
+can help us handle large amounts of data efficiently.
+

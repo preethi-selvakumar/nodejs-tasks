@@ -1,0 +1,14 @@
+Task 9 Input File
+
+This file is created to test backpressure handling in Node.js streams.
+Backpressure occurs when the writable stream cannot handle the incoming
+data as fast as the readable stream is sending it.
+
+By implementing flow control, we can pause the readable stream when
+the writable stream buffer is full and resume it when the buffer drains.
+
+This prevents memory overflow and ensures smooth data transfer.
+
+Node.js makes it simple to implement backpressure using pause(),
+resume(), and the drain event.
+

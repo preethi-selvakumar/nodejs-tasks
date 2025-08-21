@@ -1,0 +1,3 @@
+hello stream
+transform stream is working
+node.js makes streaming simple

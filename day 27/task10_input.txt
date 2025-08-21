@@ -1,0 +1,7 @@
+Task 10 Input File
+
+This file is used to test stream events in Node.js.
+Each chunk of data will trigger the 'data' event.
+When the file is completely read, the 'end' event will fire.
+If the file does not exist or any issue occurs, the 'error' event will fire.
+

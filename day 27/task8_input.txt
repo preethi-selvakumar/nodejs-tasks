@@ -1,0 +1,7 @@
+Task 8 Input File
+
+We are practicing reading a file line by line.
+This helps in processing data without loading the whole file at once.
+Line by line reading is useful for log files or large text files.
+
+

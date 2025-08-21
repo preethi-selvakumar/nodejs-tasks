@@ -1,0 +1,8 @@
+Task 3 Input File
+
+Streams are a powerful way to handle data in Node.js.
+Readable streams let us read data chunk by chunk.
+Writable streams let us write data efficiently.
+Using pipe(), we can directly connect readable and writable streams.
+
+This makes file handling simple and memory-efficient.
